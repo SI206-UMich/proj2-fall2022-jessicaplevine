@@ -332,9 +332,9 @@ class TestCases(unittest.TestCase):
 
 if __name__ == '__main__':
     results = get_listings_from_search_results("html_files/mission_district_search_results.html")
-    listing_info  = get_listing_information('1944564')
+    listing_info  = get_listing_information('1944564') #this is one of my tests
     all_listings =  get_detailed_listing_database("html_files/mission_district_search_results.html")
-    # database = get_detailed_listing_database("html_files/mission_district_search_results.html")
-    # write_csv(database, "airbnb_dataset.csv")
-    # check_policy_numbers(database)
+    database = get_detailed_listing_database("html_files/mission_district_search_results.html")
+    write_csv(database, "airbnb_dataset.csv")
+    check_policy_numbers(database)
     unittest.main(verbosity=2)
